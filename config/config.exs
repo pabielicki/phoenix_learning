@@ -17,6 +17,10 @@ config :phoenix_learning, PhoenixLearning.Endpoint,
   pubsub: [name: PhoenixLearning.PubSub,
            adapter: Phoenix.PubSub.PG2]
 
+# Setting hamls as template engine.
+config :phoenix, :template_engines,
+  haml: PhoenixHaml.Engine
+
 # Configures Elixir's Logger
 config :logger, :console,
   format: "$time $metadata[$level] $message\n",
